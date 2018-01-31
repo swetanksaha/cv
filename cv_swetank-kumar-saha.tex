@@ -91,6 +91,13 @@
   \par}% to avoid weird spacing bug at the first section if no blank line is left after \makecvhead
 
 \newcommand*{\scholarsocialsymbol} {{\small\faGraduationCap}~}
+
+\newcommand*{\pub}[6]{
+\cvitem{#1}{\textbf{#2}\newline
+           {\small \underline{Swetank Kumar Saha}, #3}\newline
+           {\small \textit{#4 (\textbf{#5}) #6}}}
+}
+
 \makeatother
 
 \firstname{Swetank Kumar} % Your first name
@@ -108,7 +115,7 @@
 \extrainfo{\scholarsocialsymbol\httplink[Scholar]{scholar.google.com/citations?user=CAt6EycAAAAJ}}
 \social[github]{swetanksaha}
 \social[linkedin]{swetanksaha}
-\photo[70pt][0pt]{me} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+\photo[72pt][0pt]{me} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
 %\quote{"A witty and playful quotation" - John Smith}
 
 \begin{document}
@@ -137,10 +144,89 @@
 \subsection{Ongoing}
 \subsection{Previous}
 
+
 \section{Publications}
 \subsection{Conference}
+\pub{C7}
+{Multipath TCP in Smartphones: Impact on Performance, Energy, and CPU Utilization}
+{Abhishek Kannan, Geunhyung Lee, Nishant Ravichandran, Parag Kamalakar Medhe, Naved Merchant, Dimitrios Koutsonikolas}
+{ACM International Symposium on Mobility Management and Wireless Access}{MobiWac}{2017}
+
+\pub{C6}
+{A Detailed Look into Power Consumption of Commodity 60 GHz Devices}
+{Tariq Siddiqui, Dimitrios Koutsonikolas, Adrian Loch, Joerg Widmer, Ramalingam Sridhar}
+{IEEE International Symposium on A World of Wireless, Mobile and Multimedia Networks}{WoWMoM}{2017}
+
+\pub{C5}
+{A Feasibility Study of 60 GHz Indoor WLANs}
+{Tariq Siddiqui, Viral Vijay Vira, Anuj Garg, Dimitrios Koutsonikolas}
+{IEEE International Conference on Computer Communication and Networks}{ICCCN}{2016}
+
+\pub{C4}
+{Revisiting 802.11 Power Consumption Modeling in Smartphones}
+{Pratham Malik, Selvaganesh Dharmeswaran, Dimitrios Koutsonikolas}
+{IEEE International Symposium on A World of Wireless, Mobile and Multimedia Networks}{WoWMoM}{2016}
+
+\pub{C3}
+{Multi-Gigabit Indoor WLANs: Looking Beyond 2.4/5 GHz}
+{Viral Vijay Vira, Anuj Garg, Dimitrios Koutsonikolas}
+{IEEE International Conference on Communications}{ICC}{2016}
+
+\pub{C2}
+{Power-Throughput Tradeoffs of 802.11n/ac in Smartphones}
+{Pratik Deshpande, Pranav P Inamdar, Ramanujan K Sheshadri, Dimitrios Koutsonikolas}
+{IEEE Conference on Computer Communications}{INFOCOM}{2015}
+
+\cvitem{C1}{\textbf{Take Control of Your SMSes : Designing an Usable Spam SMS Filtering System}\newline
+           {\small Kuldeep Yadav, \underline{Swetank K Saha}, Ponnurangam Kumaraguru, Rohit Kumra}\newline
+           {\small IEEE International Conference on Mobile Data Management (\textbf{MDM}) 2012}}
+
+\subsection{Journal}
+\pub{J1}
+{60 GHz Indoor WLANs: Insights into Performance and Power Consumption}
+{Darshan Godabanahal Malleshappa, Avinash Palamanda, Viral Vijay Vira, Anuj Garg, Dimitrios Koutsonikolas}
+{Springer Wireless Networks}{WINE}{2017}
+
 \subsection{Workshop}
+\pub{W4}
+{X60: A Programmable Testbed for Wideband 60 GHz WLANs with Phased Arrays}
+{Yasaman Ghasempour, Muhammad Kumail Haider, Tariq Siddiqui, Paulo De Melo, Neerad Somanchi, Luke Zakrajsek, Arjun Singh, Owen Torres, Daniel Uvaydov, Josep Miquel Jornet, Edward Knightly, Dimitrios Koutsonikolas, Dimitris Pados, Zhi Sun}
+{ACM Workshop on Wireless Network Testbeds, Experimental evaluation \& CHaracterization}{WiNTECH}{2017}
+
+\pub{W3}
+{Improving Connectivity, Coverage, and Capacity in 60 GHz Indoor WLANs Using Relays}
+{Li Sun, Dimitrios Koutsonikolas}
+{ACM Workshop on Wireless of the Students, by the Students, \& for the Students}{S$^3$}{2015}
+
+\pub{W2}
+{A First Look at TCP Performance in Indoor IEEE 802.11ad WLANs}
+{Anuj Garg, Dimitrios Koutsonikolas}
+{IEEE Conference on Computer Communications Workshops}{INFOCOM WKSHPS}{2015}
+
+\pub{W1}
+{On the Feasibility of Indoor IEEE 802.11ad WLANs}
+{Viral Vijay Vira, Anuj Garg, Andrew Tennenbaum, Dimitrios Koutsonikolas}
+{IEEE Conference on Computer Communications Workshops}{INFOCOM WKSHPS}{2015}
+
 \subsection{Poster}
+\pub{P2}
+{Poster: Can MPTCP Improve Performance for Dual-Band 60 GHz/5 GHz Clients?}
+{Roshan Shyamsunder, Naveen Muralidhar Prakash, Hany Assasa, Adrian Loch, Dimitrios Koutsonikolas, Joerg Widmer}
+{ACM International Conference on Mobile Computing and Networking}{MobiCom}{2017}
+
+\pub{P1}
+{Poster: X60: A Programmable Testbed for Wideband 60 GHz WLANs with Phased Arrays}
+{Yasaman Ghasempour, Muhammad Kumail Haider, Tariq Siddiqui, Paulo De Melo, Neerad Somanchi, Luke Zakrajsek, Arjun Singh, Owen Torres, Daniel Uvaydov, Josep Miquel Jornet, Edward Knightly, Dimitrios Koutsonikolas, Dimitris Pados, Zhi Sun}
+{ACM International Conference on Mobile Computing and Networking}{MobiCom}{2017}
+
+\subsection{Technical Report}
+\pub{T1}
+{60 GHz Multi-Gigabit Indoor WLANs: Dream or Reality?}
+{Viral Vijay Vira, Anuj Garg, Dimitrios Koutsonikolas}
+{arXiv:1509.04274}{arXiv}{2015}
 
 \section{Work Experience}
+
+\section{Awards}
+
 \end{document}
