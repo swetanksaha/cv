@@ -3,7 +3,7 @@
 \moderncvstyle{classic}
 \moderncvcolor{blue}
 
-\usepackage[scale=0.8]{geometry}
+\usepackage[margin=0.75in]{geometry}
 \usepackage{fontawesome}
 
 %\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
@@ -95,7 +95,7 @@
 \newcommand*{\pub}[6]{
 \cvitem{#1}{\textbf{#2}\newline
            {\small \underline{Swetank Kumar Saha}, #3}\newline
-           {\small \textit{#4 (\textbf{#5}) #6}}}
+           {\small \textit{#4} (\textbf{#5}) \textit{#6}}}
 }
 
 \makeatother
@@ -111,11 +111,11 @@
 %\fax{(000) 111 1113}
 \email{swetankk@buffalo.edu}
 \emailalt{swetank.saha@gmail.com}
-\homepage{swetank.in}
+%\homepage{swetank.in}
 \extrainfo{\scholarsocialsymbol\httplink[Scholar]{scholar.google.com/citations?user=CAt6EycAAAAJ}}
 \social[github]{swetanksaha}
 \social[linkedin]{swetanksaha}
-\photo[72pt][0pt]{me} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+\photo[64pt][0pt]{me} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
 %\quote{"A witty and playful quotation" - John Smith}
 
 \begin{document}
@@ -126,13 +126,13 @@
 \section{Education}
 \cvitem{2013-Present}{\textbf{Ph.D.} Computer Science \& Engineering\newline
 					  University at Buffalo, SUNY, NY, US\newline
-					  \textsc{ADVISOR} \httplink[\textit{Dr. Dimitrios Koutsonikolas}]{www.cse.buffalo.edu/faculty/dimitrio/}\newline
-					  \textsc{CGPA} 3.81/4.0}
+					  {\small \textsc{ADVISOR}} \httplink[\textit{Dr. Dimitrios Koutsonikolas}]{www.cse.buffalo.edu/faculty/dimitrio/}\newline
+					  {\small \textsc{CGPA}} 3.81/4.0}
 
 \cvitem{2009-2013}{\textbf{Bachelor of Technology} Computer Science \& Engineering (\textit{with Honors})\newline
                    IIIT-Delhi, New Delhi, IN\newline
-                   \textsc{THESIS} \textit{Smartphone-based Anomalous Human Activity Detection and Prediction}\newline
-                   \textsc{CGPA} 9.01/10.0}
+                   {\small \textsc{THESIS}} \textit{Smartphone-based Anomalous Human Activity Detection and Prediction}\newline
+                   {\small \textsc{CGPA}} 9.01/10.0}
 
 
 \section{Research Interests}
@@ -144,7 +144,8 @@
 \subsection{Current}
 \cvlistitem{Indoor 802.11ad/mmWave WLANs
 \begin{itemize}
-\item Identify Oppurtunities \& challenges in realizing 802.11ad indoor WLANs
+\renewcommand\labelitemi{--}
+\item Identify oppurtunities \& challenges in realizing 802.11ad indoor WLANs
 \item Design and evaluation of link adaptation mechanisms
 \item Leverage MPTCP to build fast \& reliable 802.11ad+ac network
 \item Identify energy consumption concerns in commercial 802.11ad clients
@@ -152,14 +153,16 @@
 }
 \cvlistitem{LTE/WiFi coexistence in 5 GHz \textsc{[P1]}
 \begin{itemize}
+\renewcommand\labelitemi{--}
 \item Quantifying coexistence issues with LTE-Unlicensed and Enterprise WLAN
-\item Propose standard-compliant WiFi-based solutions 
+\item Propose standard-compliant WiFi-based solutions
 \end{itemize}
 }
 
 \subsection{Previous}
 \cvlistitem{WiFi power-performance tradeoffs in Smartphones
 \begin{itemize}
+\renewcommand\labelitemi{--}
 \item Identify the power-performance relationship in context of 802.11n/ac/ad in mobile devices
 \item Build accurate power models
 \end{itemize}
@@ -250,6 +253,11 @@
 {Viral Vijay Vira, Anuj Garg, Dimitrios Koutsonikolas}
 {arXiv:1509.04274}{arXiv}{2015}
 
+\subsection{Under Review}
+\cvitemwithcomment{}{X60: A Programmable Testbed for Wideband 60 GHz WLANs with Phased Arrays}{Elsevier COMCOM}
+\cvitemwithcomment{}{Medium Access and Transport Protocol Aspects in Practical 802.11ad Networks}{IEEE WoWMoM 2018}
+\cvitemwithcomment{}{Performance Characterization of COTS 802.11ad Devices}{}
+
 \section{Work Experience}
 \cventry{2013--Present}{Research/Teaching Assistant}{University at Buffalo, SUNY}{NY}{US}{}
 \cventry{Summer 2017}{Research Intern}{Hewlett Packard Labs}{Palo Alto, CA}{US}{LTE-Unlicensed/WiFi Co-existence in 5 GHz}
@@ -260,6 +268,7 @@
 \section{Awards}
 \cvlistitem{\textbf{2$^{nd}$ Runner Up} ACM Student Research Competition (SRC) 2017 {\small \textsc{[P2]}}}
 \cvlistitem{\textbf{Best Paper Runner Up} ACM WiNTECH 2017 {\small \textsc{[W4]}}}
+\cvlistitem{\textbf{1$^{st}$} prize at the UB School of Engineering \& Applied Sciences (SEAS) Lightning Talk Competition}
 \cvlistitem{\textbf{Winner} of the \textit{Tally Innovation Award} at the \httplink[All-India Jedi Project Challenge 2012]{http://jed-i.in/challenge/}, organized by IISc., Bangalore.}
 \cvlistitem{Travel Grants
 \begin{itemize}
@@ -280,7 +289,7 @@
 \end{itemize}
 }
 
-\cvitem{Journal Review}{
+\cvitem{Invited Journal Reviews}{
 \begin{itemize}
 \item IEEE Transactions on Mobile Computing (TMC) 2017
 \item MDPI Applied Sciences 2017
@@ -293,11 +302,10 @@
 \cvitem{External Reviewer}{
 \begin{itemize}
 \item IEEE Conference on Computer Communications (INFOCOM) 2016, 2015
-\item IEEE International Symposium on A World of Wireless, Mobile and Multimedia Networks (WoWMoM) 2016, 15
+\item IEEE International Symposium on A World of Wireless, Mobile and Multimedia Networks (WoWMoM) 2016, 2015
 \item IEEE International Conference on Sensing, Communication and Networking (SECON) 2016, 2015
 \end{itemize}
 }
-
 
 \section{Technical Skills}
 \cvitem{\textit{Languages}}{C, Python, Java}
