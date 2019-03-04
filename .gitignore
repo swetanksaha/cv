@@ -226,3 +226,4 @@ TSWLatexianTemp*
 *.sta
 
 moderncv/
+.DS_store

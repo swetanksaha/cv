@@ -18,8 +18,13 @@ $(MODERNCV_DIR):
 		git clone $(MODERNCV_GITHUB); \
 	fi
 
+UNAME_S := $(shell uname -s)
 view: $(TEX_FILE).pdf
-	xdg-open $(TEX_FILE).pdf&
+ifeq ($(UNAME_S),Darwin)
+	open $(TEX_FILE).pdf &
+else
+	xdg-open $(TEX_FILE).pdf &
+endif
 
 clean:
 	rm -rf $(TEX_FILE).aux $(TEX_FILE).log $(TEX_FILE).out $(TEX_FILE).pdf
