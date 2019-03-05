@@ -5,8 +5,18 @@
 
 \usepackage[margin=0.75in]{geometry}
 \usepackage{fontawesome}
+\AtBeginDocument{
+    \hypersetup{
+        colorlinks=true,
+        linkcolor=blue,
+        filecolor=magenta,      
+        urlcolor=cyan,
+        pdftitle={Sharelatex Example},
+        bookmarks=true,
+        pdfpagemode=FullScreen,
+    }
+}
 
-%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
 \setlength{\makecvtitlenamewidth}{11cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
 
 %----------------------------------------------------------------------------------------
@@ -39,7 +49,7 @@
 		\ifthenelse{\isundefined{\@emailalt}}{}{\makenewline\emaillink{\@emailalt}}%
 		\phonesdetails% needs to be pre-rendered as loops and tabulars seem to conflict
         \socialsdetails% needs to be pre-rendered as loops and tabulars seem to conflict
-		\ifthenelse{\isundefined{\@homepage}}{}{\makenewline\homepagesymbol\httplink{\@homepage}}%
+		\ifthenelse{\isundefined{\@homepage}}{}{\makenewline\homepagesymbol\link{\@homepage}}%
         \ifthenelse{\isundefined{\@extrainfo}}{}{\makenewline\@extrainfo}%
       \end{tabular}
     }\fi%
@@ -118,7 +128,7 @@
 \email{swetankk@buffalo.edu}
 \emailalt{swetank.saha@gmail.com}
 %\homepage{swetank.in}
-\extrainfo{\scholarsocialsymbol\link[Scholar]{https://scholar.google.com/citations?user=CAt6EycAAAAJ}}
+\extrainfo{\scholarsocialsymbol\link[Google Scholar]{https://scholar.google.com/citations?user=CAt6EycAAAAJ}}
 \social[github]{swetanksaha}
 \social[linkedin]{swetanksaha}
 \photo[64pt][0pt]{me} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
