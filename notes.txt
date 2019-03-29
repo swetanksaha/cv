@@ -1,0 +1,7 @@
+
+
+1. Brng name to center
+2. Make it of smaller font size
+3. Bring other details (contact/social) below the name in one single line
+4. Write a projecs section highlighting languages used at the end of each one's title (eg: Amazon Dynamo		Java, Android) ***
+5. 
