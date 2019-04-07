@@ -8,7 +8,7 @@
 \usepackage{comment}
 
 %\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
-\setlength{\makecvtitlenamewidth}{13cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+%\setlength{\makecvtitlenamewidth}{9cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
 
 %----------------------------------------------------------------------------------------
 %	Fixes: Swetank Kumar Saha
@@ -16,79 +16,75 @@
 \definecolor{color1}{rgb}{0,0,1.0}% dark blue
 \makeatletter
 \newcommand*{\emailalt}[1]{\def\@emailalt{#1}}
+\renewcommand*{\addressfont}{\normalsize\mdseries}
+
+% commands
+\@initializecommand{\makeheaddetailssymbol}{%
+    {~~~{\rmfamily\textbullet}~~~}}% the \rmfamily is required to force Latin Modern fonts when using sans serif, as OMS/lmss/m/n is not defined and gets substituted by OMS/cmsy/m/n
+%   internal command to add an element to the footer
+%   it collects the elements in a temporary box, and checks when to flush the box
+\@initializebox{\makeheaddetailsbox}%
+\@initializebox{\makeheaddetailstempbox}%
+\@initializelength{\makeheaddetailswidth}%
+\@initializelength{\makeheaddetailsboxwidth}%
+\@initializeif{\if@firstmakeheaddetailselement}\@firstmakeheaddetailselementtrue%
+%   adds an element to the makehead, separated by makeheadsymbol
+%   usage: \addtomakehead[makeheadsymbol]{element}
+\newcommand*{\addtomakeheaddetails}[2][\makeheaddetailssymbol]{% TODO: use \@initializecommand, which requires modifying its definition to handle mandatory and optional arguments
+  \if@firstmakeheaddetailselement%
+    \savebox{\makeheaddetailstempbox}{\usebox{\makeheaddetailsbox}#2}%
+  \else%
+    \savebox{\makeheaddetailstempbox}{\usebox{\makeheaddetailsbox}#1#2}\fi%
+  \settowidth{\makeheaddetailsboxwidth}{\usebox{\makeheaddetailstempbox}}%
+  \ifnum\makeheaddetailsboxwidth<\makeheaddetailswidth%
+    \savebox{\makeheaddetailsbox}{\usebox{\makeheaddetailstempbox}}%
+    \@firstmakeheaddetailselementfalse%
+  \else%
+    \flushmakeheaddetails\\%
+    \savebox{\makeheaddetailsbox}{#2}%
+    \savebox{\makeheaddetailstempbox}{#2}%
+    \settowidth{\makeheaddetailsboxwidth}{\usebox{\makeheaddetailsbox}}%
+    \@firstmakeheaddetailselementfalse\fi
+}
+
+%   internal command to flush the makehead
+\@initializecommand{\flushmakeheaddetails}{%
+  \strut\usebox{\makeheaddetailsbox}%
+  \savebox{\makeheaddetailsbox}{}%
+  \savebox{\makeheaddetailstempbox}{}%
+  \setlength{\makeheaddetailsboxwidth}{0pt}}
+
+\@initializecommand{\makehead}{%
+  \setlength{\makeheaddetailswidth}{0.8\textwidth}%
+  \hfil%
+  \parbox{\makeheaddetailswidth}{%
+    \centering%
+    % name and title
+    \namestyle{\@firstname~\@lastname}%
+    \ifthenelse{\equal{\@title}{}}{}{\titlestyle{~|~\@title}}\\% \isundefined doesn't work on \@title, as LaTeX itself defines \@title (before it possibly gets redefined by \title) 
+    % optional detailed information
+    \if@details{%
+        \addressfont%
+        \ifthenelse{\isundefined{\@addressstreet}}{}{\addtomakeheaddetails{\addresssymbol\@addressstreet}%
+        \ifthenelse{\equal{\@addresscity}{}}{}{\addtomakeheaddetails[~--~]{\@addresscity}}% if \addresstreet is defined, \addresscity and \addresscountry will always be defined but could be empty
+        \ifthenelse{\equal{\@addresscountry}{}}{}{\addtomakeheaddetails[~--~]{\@addresscountry}}%
+        \flushmakeheaddetails\@firstmakeheaddetailselementtrue\\\null}%
+        \collectionloop{phones}{% the key holds the phone type (=symbol command prefix), the item holds the number
+            \addtomakeheaddetails{\csname\collectionloopkey phonesymbol\endcsname\collectionloopitem}}%
+        \ifthenelse{\isundefined{\@email}}{}{\addtomakeheaddetails{\emailsymbol\emaillink{\@email}}}%
+        \ifthenelse{\isundefined{\@emailalt}}{}{\addtomakeheaddetails{\emailsymbol\emaillink{\@emailalt}}}%
+        \flushmakeheaddetails\\
+        \@firstmakeheaddetailselementtrue
+        \ifthenelse{\isundefined{\@homepage}}{}{\addtomakeheaddetails{\homepagesymbol\httplink{\@homepage}}}%
+        \collectionloop{socials}{% the key holds the social type (=symbol command prefix), the item holds the link
+            \addtomakeheaddetails{\csname\collectionloopkey socialsymbol\endcsname\collectionloopitem}}%
+        \ifthenelse{\isundefined{\@extrainfo}}{}{\addtomakeheaddetails{\@extrainfo}}%
+    \flushmakeheaddetails}\fi}\\[2.5em]}% need to force a \par after this to avoid weird spacing bug at the first section if no blank line is left after \makehead
 
 \renewcommand*{\makecvhead}{%
   % recompute lengths (in case we are switching from letter to resume, or vice versa)
   \recomputecvlengths%
-  % optional detailed information (pre-rendering)
-  \@initializebox{\makecvheaddetailsbox}%
-  \if@details%
-    \def\phonesdetails{}%
-    \collectionloop{phones}{% the key holds the phone type (=symbol command prefix), the item holds the number
-      \protected@edef\phonesdetails{\phonesdetails\protect\makenewline\csname\collectionloopkey phonesymbol\endcsname\collectionloopitem}}%
-    \def\socialsdetails{}%
-    \collectionloop{socials}{% the key holds the social type (=symbol command prefix), the item holds the link
-      \protected@edef\socialsdetails{\socialsdetails\protect\makenewline\csname\collectionloopkey socialsymbol\endcsname\collectionloopitem}}%
-    \savebox{\makecvheaddetailsbox}{%
-      \addressfont\color{color2}%
-      \if@left\begin{tabular}[b]{@{}r@{}}\fi%
-      \if@right\begin{tabular}[b]{@{}l@{}}\fi%
-        \ifthenelse{\isundefined{\@addressstreet}}{}{\makenewline\addresssymbol\@addressstreet%
-          \ifthenelse{\equal{\@addresscity}{}}{}{\makenewline\@addresscity}% if \addresstreet is defined, \addresscity and addresscountry will always be defined but could be empty
-          \ifthenelse{\equal{\@addresscountry}{}}{}{\makenewline\@addresscountry}}%
-        \ifthenelse{\isundefined{\@email}}{}{\makenewline\emailsymbol\emaillink{\@email}}%
-		\ifthenelse{\isundefined{\@emailalt}}{}{\makenewline\emaillink{\@emailalt}}%
-		\phonesdetails% needs to be pre-rendered as loops and tabulars seem to conflict
-        \socialsdetails% needs to be pre-rendered as loops and tabulars seem to conflict
-		\ifthenelse{\isundefined{\@homepage}}{}{\makenewline\homepagesymbol\httplink{\@homepage}}%
-        \ifthenelse{\isundefined{\@extrainfo}}{}{\makenewline\@extrainfo}%
-      \end{tabular}
-    }\fi%
-  % optional photo (pre-rendering)
-  \@initializebox{\makecvheadpicturebox}%
-  \savebox{\makecvheadpicturebox}{%
-    \ifthenelse{\isundefined{\@photo}}%
-      {}%
-      {%
-        \if@left%
-          \hspace*{\separatorcolumnwidth}\fi%
-        \color{color1}%
-        \setlength{\fboxrule}{\@photoframewidth}%
-        \ifdim\@photoframewidth=0pt%
-          \setlength{\fboxsep}{0pt}\fi%
-        \framebox{\includegraphics[width=\@photowidth]{\@photo}}}%
-        \if@right%
-          \hspace*{\separatorcolumnwidth}\fi}%
-  % name and title (pre-rendering)
-  \@initializelength{\makecvheaddetailswidth}\settowidth{\makecvheaddetailswidth}{\usebox{\makecvheaddetailsbox}}%
-  \@initializelength{\makecvheadpicturewidth}\settowidth{\makecvheadpicturewidth}{\usebox{\makecvheadpicturebox}}%
-  \ifthenelse{\lengthtest{\makecvheadnamewidth=0pt}}% check for dummy value (equivalent to \ifdim\makecvheadnamewidth=0pt)
-    {\setlength{\makecvheadnamewidth}{\textwidth-\makecvheaddetailswidth-\makecvheadpicturewidth}}%
-    {}%
-  \@initializebox{\makecvheadnamebox}%
-  \savebox{\makecvheadnamebox}{%
-    \begin{minipage}[b]{\makecvheadnamewidth}%
-      \if@left\raggedright\fi%
-      \if@right\raggedleft\fi%
-      \namestyle{\@firstname\ \@lastname}%
-      \ifthenelse{\equal{\@title}{}}{}{\\[1.25em]\titlestyle{\@title}}%
-    \end{minipage}}%
-  % rendering
-  \if@left%
-    \usebox{\makecvheadnamebox}%
-    \hfill%
-    \llap{\usebox{\makecvheaddetailsbox}}% \llap is used to suppress the width of the box, allowing overlap if the value of makecvheadnamewidth is forced
-    \usebox{\makecvheadpicturebox}\fi%
-  \if@right%
-    \usebox{\makecvheadpicturebox}%
-    \rlap{\usebox{\makecvheaddetailsbox}}% \llap is used to suppress the width of the box, allowing overlap if the value of makecvheadnamewidth is forced
-    \hfill%
-    \usebox{\makecvheadnamebox}\fi%
-  \\[2.5em]%
-  % optional quote
-  \ifthenelse{\isundefined{\@quote}}%
-    {}%
-    {{\centering\begin{minipage}{\quotewidth}\centering\quotestyle{\@quote}\end{minipage}\\[2.5em]}}%
+  \makehead
   \par}% to avoid weird spacing bug at the first section if no blank line is left after \makecvhead
 
 \newcommand*{\scholarsocialsymbol} {{\small\faGraduationCap}~}
