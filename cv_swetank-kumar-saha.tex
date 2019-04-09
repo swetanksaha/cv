@@ -18,8 +18,6 @@
 
 \include{header_defs}
 
-\newcommand*{\scholarsocialsymbol} {{\small\faGraduationCap}~}
-
 \newcommand*{\pub}[6]{
 \cvitem{#1}{\textbf{#2}\newline
            {\small \underline{Swetank Kumar Saha}, #3}\newline
@@ -34,8 +32,8 @@
 
 \makeatother
 
-\firstname{Swetank Kumar} % Your first name
-\familyname{Saha} % Your last name
+\firstname{\textbf{Swetank Kumar}} % Your first name
+\familyname{\textbf{Saha}} % Your last name
 
 % All information in this block is optional, comment out any lines you don't need
 % \title{{\normalfont \large Ph.D. Candidate\newline Computer Science \& Engineering\newline University at Buffalo, SUNY}}
@@ -46,9 +44,9 @@
 \email{swetankk@buffalo.edu}
 \emailalt{swetank.saha@gmail.com}
 %\homepage{swetank.in}
-\extrainfo{\scholarsocialsymbol\httplink[Scholar]{scholar.google.com/citations?user=CAt6EycAAAAJ}}
-\social[github]{swetanksaha}
-\social[linkedin]{swetanksaha}
+\cvsocial[github]{swetanksaha}
+\cvsocial[linkedin]{swetanksaha}
+\cvsocial[scholar]{CAt6EycAAAAJ}
 % \photo[64pt][0pt]{me} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
 %\quote{"A witty and playful quotation" - John Smith}
 
@@ -58,21 +56,19 @@
 \vspace{-0.4in}
 
 \section{Education}
-\cvitem{2013-Present}{\textbf{Ph.D. Candidate} Computer Science \& Engineering\newline
+\cvitem{2013-Present}{\textbf{Ph.D. Candidate} Computer Science \& Engineering | CGPA 3.81/4.0\newline
 					  University at Buffalo, SUNY, NY, US\newline
+            {}
 					  % {\small \textsc{ADVISOR}} \httplink[\textit{Dr. Dimitrios Koutsonikolas}]{www.cse.buffalo.edu/faculty/dimitrio/}\newline
-					  {\small \textsc{CGPA}} 3.81/4.0}
+					  }
 
-\cvitem{2009-2013}{\textbf{Bachelor of Technology} Computer Science \& Engineering (\textit{with Honors})\newline
-                   IIIT-Delhi, New Delhi, IN\newline
-                   % {\small \textsc{THESIS}} \textit{Smartphone-based Anomalous Human Activity Detection and Prediction}\newline
-                   {\small \textsc{CGPA}} 9.01/10.0}
-
-
+\cvitem{2009-2013}{\textbf{Bachelor of Technology} Computer Science \& Engineering (\textit{with Honors}) | CGPA 9.01/10.0\newline
+            IIIT-Delhi, New Delhi, IN\newline
+            % {\small \textsc{THESIS}} \textit{Smartphone-based Anomalous Human Activity Detection and Prediction}\newline
+            }
 % \section{Research Interests}
 % \cvlistitem{Wireless Networking}
 % \cvlistitem{Mobile Systems}
-
 
 % \section{Research Directions}
 % \subsection{Current}
@@ -215,13 +211,16 @@
 \cvitemwithcomment{}{AMuSe: An Agile Multipath TCP Scheduler for Dual-Band 802.11ad/ac Wireless LANs}{}
 \end{comment}
 
+\section{Technical Skills}
+\cvitem{\textit{Languages}}{C, Python, Java}
+\cvitem{\textit{SDRs}}{USRP, GNURadio, LabView}
+\cvitem{\textit{Linux}}{Wireless Device Drivers (\textsc{ath9k, ath10k, wil6210}), TCP and MPTCP Networking Subsystem/Stack}
+%\cvitem{\textit{Simulators}}{ns2, ns3}
+\cvitem{\textit{Cloud}}{Google App Engine}
+\cvitem{\textit{Web}}{Django, PHP, HTML, js}
+
 \section{Work Experience}
-\cventry{2013--Present}{Research Assistant}{University at Buffalo, SUNY}{NY}{US}{}
-\cventry{2013--Present}{Teaching Assistant}{University at Buffalo, SUNY}{NY}{US}{Designed and developed assignments and automated grader for the Modern Networking Concepts course\newline\httplink[https://cse4589.github.io/]{https://cse4589.github.io/} [\link[Github Source]{https://github.com/cse4589}]}
-\cventry{Summer 2017}{Research Intern}{Hewlett Packard Labs}{Palo Alto, CA}{US}{LTE-Unlicensed/WiFi Co-existence in 5 GHz}
-\cventry{Summer 2016}{Research Intern}{IMDEA Networks Institute}{Madrid}{Spain}{802.11ad (60 GHz) Indoor WLANs}
-\cventry{Summer 2013}{Software Developer}{Google Summer of Code 2013}{Google}{}{Worked on the popular Android data collection framework Funf.}
-\cventry{Summer 2012}{Research Intern}{Airbus India, EADS Innovation Works}{Bangalore}{India}{Study and development of Image based localization techniques.}
+\input{work_experience}
 
 \section{Projects}
 \cventry{Language}{Project 1}{}{}{}{Designed and developed assignments and automated grader for the Modern Networking Concepts course\newline\httplink[https://cse4589.github.io/]{https://cse4589.github.io/} [\link[Github Source]{https://github.com/cse4589}]}
@@ -236,7 +235,7 @@
 \cvlistitem{\textbf{2$^{nd}$ Runner Up} ACM Student Research Competition (SRC) 2017 {\small \textsc{[P2]}}}
 \cvlistitem{\textbf{Best Paper Runner Up} ACM WiNTECH 2017 {\small \textsc{[W4]}}}
 \cvlistitem{\textbf{1$^{st}$} prize at the UB School of Engineering \& Applied Sciences (SEAS) Lightning Talk Competition}
-\cvlistitem{\textbf{Winner} of the \textit{Tally Innovation Award} at the \httplink[All-India Jedi Project Challenge 2012]{http://jed-i.in/challenge/}, organized by IISc., Bangalore.}
+\cvlistitem{\textbf{Winner} of the \textit{Tally Innovation Award} at the \link[All-India Jedi Project Challenge 2012]{https://jed-i.in/challenge/}, organized by IISc., Bangalore.}
 \cvlistitem{Travel Grants
 \begin{itemize}
 \renewcommand\labelitemi{--}
@@ -276,14 +275,5 @@
 % \item IEEE International Conference on Sensing, Communication and Networking (SECON) 2016, 2015
 % \end{itemize}
 % }
-
-\vspace{-0.1in}
-\section{Technical Skills}
-\cvitem{\textit{Languages}}{C, Python, Java}
-\cvitem{\textit{SDRs}}{USRP, GNURadio, LabView}
-\cvitem{\textit{Linux}}{Wireless Device Drivers (\textsc{ath9k, ath10k, wil6210}), TCP and MPTCP Networking Subsystem/Stack}
-%\cvitem{\textit{Simulators}}{ns2, ns3}
-\cvitem{\textit{Cloud}}{Google App Engine}
-\cvitem{\textit{Web}}{Django, PHP, HTML, js}
 
 \end{document}
