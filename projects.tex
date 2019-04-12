@@ -18,12 +18,30 @@
 
 \cventry{\texttt{C}\newline
 \texttt{Python}\newline
-\texttt{TCP}\newline
-\texttt{MPTCP}\newline
-\texttt{tc}\newline
-\texttt{Kernel}\newline
+\texttt{expect}\newline
+\texttt{select}\newline
+\texttt{Socket API}\newline
 }{Programming Assignments and Automated Grader for the computer-networking course}{}{}{\link[\faGithub]{https://cse4589.github.io}}{
 \begin{itemize}
-  \item
+  \item Designed and developed set of three networking programming assignments (PAs) along with an automated tester/grader, now standard in the CSE department at UB for the networking course.
+  \item Developed the auto-grader as a distributed application that fully automates the entire process of packaging, uploading and grading student submissions over a real network of five servers.
+  \item PA 1: Text Chat \& File Transfer Application \link[\faExternalLink]{https://cse4589.github.io/pa1/} (Source: \link[\faGithub]{https://github.com/swetanksaha/cse4589-pa1})
+        \begin{itemize}
+          \item Introduces basic socket programming, client-server model and use of \texttt{select} syscall.
+          \item Test cases check understanding of the byte-stream model of TCP (vs. UDP's packet-based).
+          \item Bonus file-transfer components allows students to compare file I/O vs. network I/O.
+        \end{itemize}
+  \item PA 2: Reliable Transport Protocols \link[\faExternalLink]{https://cse4589.github.io/pa2/} (Source: \link[\faGithub]{https://github.com/swetanksaha/cse4589-pa2})
+        \begin{itemize}
+          \item Uses a simulated environment to ask students to implement three reliable data transport protocols.
+          \item Requires implementation of multiple alarms with a single simulator timer.
+          \item Modified an existing simulator to add sanity checks and internal support for different test cases.
+        \end{itemize}
+  \item PA 3: Software Defined Routing \link[\faExternalLink]{https://cse4589.github.io/pa3/} (Source: \link[\faGithub]{https://github.com/swetanksaha/cse4589-pa3})
+        \begin{itemize}
+          \item Involves implementation of a simplified version of the distance vector routing protocol (using UDP).
+          \item Introduces students to the concept of control and data planes asking them to implement both functionalities.
+          \item Requires contruction of raw packets in code using techniques akin to the Linux kernel (Sample code: \link[\faGithub]{https://github.com/swetanksaha/cse4589-pa3/blob/master/SampleCode/swetankk/src/control_header_lib.c}).
+        \end{itemize}
 \end{itemize}
 }
