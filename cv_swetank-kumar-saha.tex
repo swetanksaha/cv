@@ -18,8 +18,8 @@
 \include{header_defs}
 
 \newcommand*{\pub}[6]{
-\cvitem{#1}{\textbf{#2}\newline
-           {\small \textit{#3} (\textbf{#4}) \textit{#5} \link[\faExternalLink]{#6}}}
+\label{#1}\cvitem{#1}{\textbf{#2}\newline
+           {\small \textit{#3} (\textbf{#4}) \textit{#5} \ifthenelse{\equal{#6}{}}{}{\link[\faExternalLink]{#6}} }}
 }
 
 \makeatother
@@ -224,7 +224,15 @@
 {Power-throughput tradeoffs of 802.11n/ac in smartphones}
 {IEEE Conference on Computer Communications}{INFOCOM}{2015}{https://ieeexplore.ieee.org/document/7218372}
 
-\section{Awards}
+\pub{J1}
+{X60: A Programmable Testbed for Wideband 60 GHz WLANs with Phased Arrays}
+{Elsevier Computer Communications}{COMCOM}{2019}{https://doi.org/10.1016/j.comcom.2018.09.005}
+
+\pub{P1}
+{LTE Interference Detection and Mitigation for Wi-Fi Links}
+{US Patent}{Record ID: 90547646}{Application \#: 15/962,722}{}
+
+\section{Selected Honors \& Awards}
 \cvlistitem{\textbf{2$^{nd}$ Runner Up} ACM Student Research Competition (SRC) 2017}
 \cvlistitem{\textbf{Best Paper Runner Up} ACM WiNTECH 2017}
 \cvlistitem{\textbf{1$^{st}$} prize at the UB School of Engineering \& Applied Sciences (SEAS) Lightning Talk Competition}
@@ -233,7 +241,7 @@
 
 \section{Professional Service}
 \cvitem{Chair}{ACM Wireless of the Students, by the Students, and for the Students (S$^3$) Workshop 2018}
-\cvitem{Reviewer}{}
+\cvitem{Journal Reviewer}{2019: IEEE ToN, IEEE VTM | 2017: IEEE TMC, IEEE TWC}
 % \cvitem{Invited Journal Reviews}{
 % \begin{itemize}
 % \item IEEE Transactions on Communications 2018
