@@ -3,7 +3,7 @@
 \moderncvstyle{classic}
 \moderncvcolor{blue}
 
-\usepackage[margin=0.75in]{geometry}
+\usepackage[margin=0.65in]{geometry}
 \usepackage{fontawesome}
 \usepackage{comment}
 
@@ -19,14 +19,7 @@
 
 \newcommand*{\pub}[6]{
 \cvitem{#1}{\textbf{#2}\newline
-           {\small \underline{Swetank Kumar Saha}, #3}\newline
-           {\small \textit{#4} (\textbf{#5}) \textit{#6}}}
-}
-
-\newcommand*{\pubsecond}[7]{
-\cvitem{#1}{\textbf{#2}\newline
-           {#3, \small \underline{Swetank Kumar Saha}, #4}\newline
-           {\small \textit{#5} (\textbf{#6}) \textit{#7}}}
+           {\small \textit{#3} (\textbf{#4}) \textit{#5} \link[\faExternalLink]{#6}}}
 }
 
 \makeatother
@@ -52,18 +45,12 @@
 \begin{document}
 
 \makecvtitle
-
+\vspace{-0.4in}
 \section{Education}
 \cvitem{2013-Present}{\textbf{Ph.D. Candidate} Computer Science \& Engineering | CGPA 3.81/4.0\newline
-					  University at Buffalo (UB), SUNY, NY, US\newline
-            {}
-					  % {\small \textsc{ADVISOR}} \httplink[\textit{Dr. Dimitrios Koutsonikolas}]{www.cse.buffalo.edu/faculty/dimitrio/}\newline
-					  }
-
+					  University at Buffalo (UB), SUNY, NY, US}
 \cvitem{2009-2013}{\textbf{Bachelor of Technology} Computer Science \& Engineering (\textit{with Honors}) | CGPA 9.01/10.0\newline
-            IIIT-Delhi, New Delhi, IN\newline
-            % {\small \textsc{THESIS}} \textit{Smartphone-based Anomalous Human Activity Detection and Prediction}\newline
-            }
+            IIIT-Delhi, New Delhi, IN}
 % \section{Research Interests}
 % \cvlistitem{Wireless Networking}
 % \cvlistitem{Mobile Systems}
@@ -215,7 +202,7 @@
 %\cvitem{\textit{Simulators}}{ns2, ns3}
 \cvitem{\textit{Networking}}{TCP/IP, HTTP, WiFi, LTE, packet sniffer, protocol analyzer}
 \cvitem{\textit{Smartphone}}{Android applications (SDK/NDK), Platform (AOSP), Kernel}
-\cvitem{\textit{SDRs}}{USRP, GNURadio, LabView}
+%\cvitem{\textit{SDRs}}{USRP, GNURadio, LabView}
 \cvitem{\textit{Web}}{Django, PHP, HTML, js}
 
 \section{Work Experience}
@@ -225,38 +212,28 @@
 \input{projects}
 
 \section{Selected Publications \& Patents}
-\pub{C9}
-{Fast and Infuriating: Performance and Pitfalls of 60 GHz WLANs Based on Consumer-Grade Hardware}
-{Hany Assasa, Adrian Loch, Naveen Muralidhar Prakash, Roshan Shyamsunder Anantharamakrishna, Shivang Aggarwal, Daniel Steinmetzer, Dimitrios Koutsonikolas, Joerg Widmer, and Matthias Hollick}
-{IEEE International Conference on Sensing, Communication and Networking}{SECON}{2018}
+\pub{C3}
+{DeMiLTE: Detecting and Mitigating LTE Interference for Enterprise Wi-Fi in 5 GHz}
+{ACM International Symposium on Mobile Ad Hoc Networking and Computing}{MobiHoc}{2019}{}
+
+\pub{C2}
+{Fast and Infuriating: Performance and Pitfalls of 60 GHz WLANs Based on Consumer Hardware}
+{IEEE International Conference on Sensing, Communication and Networking}{SECON}{2018}{https://ieeexplore.ieee.org/document/8397123}
+
+\pub{C1}
+{Power-throughput tradeoffs of 802.11n/ac in smartphones}
+{IEEE Conference on Computer Communications}{INFOCOM}{2015}{https://ieeexplore.ieee.org/document/7218372}
 
 \section{Awards}
-\cvlistitem{\textbf{2$^{nd}$ Runner Up} ACM Student Research Competition (SRC) 2017 {\small \textsc{[P2]}}}
-\cvlistitem{\textbf{Best Paper Runner Up} ACM WiNTECH 2017 {\small \textsc{[W4]}}}
+\cvlistitem{\textbf{2$^{nd}$ Runner Up} ACM Student Research Competition (SRC) 2017}
+\cvlistitem{\textbf{Best Paper Runner Up} ACM WiNTECH 2017}
 \cvlistitem{\textbf{1$^{st}$} prize at the UB School of Engineering \& Applied Sciences (SEAS) Lightning Talk Competition}
-\cvlistitem{\textbf{Winner} of the \textit{Tally Innovation Award} at the \link[All-India Jedi Project Challenge 2012]{https://jed-i.in/challenge/}, organized by IISc., Bangalore.}
-\cvlistitem{Travel Grants
-\begin{itemize}
-\renewcommand\labelitemi{--}
-\item 2018: IEEE SECON, ACM SRC
-\item 2017: ACM MobiCom, ACM SRC
-\item 2016: ACM MobiCom, IEEE ICCC
-\item 2015: ACM IMC, IEEE ICNP
-\end{itemize}
-}
+\cvlistitem{\textbf{Winner} of the \textit{Tally Innovation Award} at the \link[All-India Jedi Project Challenge 2012]{https://jed-i.in/challenge/}, IISc., Bangalore.}
+\cvlistitem{Travel Grants: IEEE SECON (2018), ACM MobiCom (2017, 2018), ACM IMC (2015)}
 
 \section{Professional Service}
-\cvitem{Chair}{
-\begin{itemize}
-\item ACM Wireless of the Students, by the Students, and for the Students (S$^3$) Workshop 2018
-\end{itemize}
-}
-\cvitem{Web Chair}{
-\begin{itemize}
-\item International Conference on Embedded Wireless Systems and Networks (EWSN) 2018
-\item ACM Workshop on Wireless Network Testbeds, Experimental evaluation \& CHaracterization (WiNTECH) 2016
-\end{itemize}
-}
+\cvitem{Chair}{ACM Wireless of the Students, by the Students, and for the Students (S$^3$) Workshop 2018}
+\cvitem{Reviewer}{}
 % \cvitem{Invited Journal Reviews}{
 % \begin{itemize}
 % \item IEEE Transactions on Communications 2018
