@@ -6,13 +6,13 @@
 \texttt{Kernel}\newline
 }{Multipath TCP (MPTCP) for Dual-band WiGig+WiFi networks}{NSF Funded}{}{}{
 \begin{itemize}
-  \item Leveraged MPTCP to engage two network interfaces simultaneously to acheive throughputs of $\sim$2.2 Gbps.
-  \item Instrumented MPTCP (Linux 4.x) using \texttt{kernel probes} to monitor over 32 parameters in real-time.
+  \item Leveraged MPTCP to engage two network interfaces simultaneously to acheive throughput of $\sim$2.2 Gbps
+  \item Instrumented MPTCP (Linux 4.x) using \texttt{kernel probes} to monitor over 32 parameters in real-time
   %\item Instrumented TCP/MPTCP send and recv queues to track input and output timestamp for each byte.
-  \item Used observations to design a new MPTCP packet scheduler - \underline{AMuSe} to improve overall throughput.
-  \item Implemented AMuSe as a kernel module replacing the default MPTCP scheduler and exposed userspace controls.
-  \item Evaluated AMuSe extensively which showed up to \textbf{2.5x} throughput improvement over the default scheduler.
-  \item Submitted a top-tier conference paper (under review).
+  \item Designed \underline{AMuSe}, a new MPTCP packet scheduler, that improved overall throughput by 2.5x
+  \item Implemented it as a kernel module replacing the default MPTCP scheduler
+  % \item Evaluated AMuSe extensively which showed up to \textbf{2.5x} throughput improvement over the default scheduler
+  \item Submitted a top-tier conference paper (under review)
 \end{itemize}
 }
 
@@ -22,7 +22,7 @@
 \texttt{Android}\newline
 }{Power-Performance Tradeoffs for Mobile Devices in Next Generation WiFi Networks}{NSF Funded}{}{}{
 \begin{itemize}
-  \item Developed set of tools to enable utlra large-scale performance and power measurement of mobile devices involving data collection \& sync. across heterogeneous systems: Linux (Wireless AP), Android and Power monitor.
+  \item Developed a set of tools to enable large-scale performance and power measurement of mobile devices involving data collection \& sync across heterogeneous systems: Linux (Wireless AP), Android, and Power monitor
   \item Modified the Linux wireless drivers (\texttt{ath9k}, \texttt{ath10k}) to expose userspace control of several PHY/MAC parameters.
   \item Analyzed the power-performance tradeoff of both the NIC and CPU for uplink/downlink data transfer.
   \item Improved the accuracy of the state-of-the-art power model by up to \textbf{40\%}.
@@ -49,7 +49,7 @@
 \texttt{Socket API}\newline
 }{Programming Assignments and Automated Grader for the Computer Networking course}{}{}{\link[\faGithub]{https://cse4589.github.io}}{
 \begin{itemize}
-  \item Designed and developed set of three networking programming assignments (PAs) along with an automated tester/grader, now standard in the CSE department at UB for the networking course.
+  \item Designed and developed a set of three networking programming assignments (PAs), now standard in the CSE department at UB for the networking course.
   \item Developed the auto-grader as a distributed application that fully automates the entire process of packaging, uploading and grading student submissions over a real network of five servers.
   \item PA 1: Text Chat \& File Transfer Application \link[\faExternalLink]{https://cse4589.github.io/pa1/} (Source: \link[\faGithub]{https://github.com/swetanksaha/cse4589-pa1})
         \begin{itemize}
