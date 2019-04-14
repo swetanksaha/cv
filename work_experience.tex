@@ -6,10 +6,9 @@
 \underline{LTE-Unlicensed/WiFi Co-existence in 5 GHz for WiFi Access Points (APs)}
 \vspace{0.025in}
 \begin{itemize}
-  \item Designed DeMiLTE, the first WiFi (802.11ac)-based mechanism for enterprise APs to detect, quantify, and react to LTE-U/LAA interference in real time, without 
-requiring additional AP hardware
-  \item Implemented this mechanism inside the AP firmware making it light-weight and eliminating the need for client modifications
-  \item Evaluated DeMiLTE in a real network showing it improves AP downlink throughput by up to \textbf{110\%}
+  \item Designed \textit{DeMiLTE}, the first WiFi (802.11ac)-based system for enterprise APs to detect, quantify, and react to LTE-U/LAA interference in real time, without requiring additional AP hardware
+  \item Implemented the system inside the AP firmware making it light-weight and fully 802.11ac-standard compliant
+  \item Improved AP downlink throughput by up to \textbf{110\%}, without requiring any client modifications
   \item Published 1 top-tier conference paper \hyperref[C3]{[C3]} and filed 1 patent \hyperref[P1]{[P1]}
 \end{itemize}
 }
@@ -24,7 +23,7 @@ requiring additional AP hardware
 \vspace{0.025in}
 \begin{itemize}
   \item Analyzed performance bottlenecks in next-generation of WiFi: 60 GHz (802.11ad)-based indoor WLANs
-  \item Modified the Linux 802.11ad wireless driver \texttt{(wil6210)} to export PHY/MAC information to userspace and allow user control over PHY parameters, like beam direction \link[\faGithub]{https://github.com/swetanksaha/wil6210}
+  \item Modified the Linux 802.11ad wireless device driver \texttt{(wil6210)} to export PHY/MAC information to userspace and allow userspace control over PHY parameters, like beam direction \link[\faGithub]{https://github.com/swetanksaha/wil6210}
   %\item Undertook an extensive measurement study with the instrumented APs and laptops to study 802.11ad links.
   \item Highlighted novel challenges and practical aspects like coverage and AP deployment, previously unreported
   \item Published the results of the study in a top-tier conference \hyperref[C2]{[C2]}
@@ -41,7 +40,7 @@ requiring additional AP hardware
 \vspace{0.025in}
 \begin{itemize}
   \item Improved Funf-in-a-box (FIAB), a service for users to build custom data collection app with zero programming
-  \item Ported the entire FIAB service from an always-on architecture running on a single EC2 server to on-demand VM instantiation on Google cloud in 1 month, significantly reducing costs \& increasing performance. \link[\faExternalLink]{https://opensource.googleblog.com/2013/08/who-is-new-in-google-summer-of-code_30.html}
+  \item Ported the entire FIAB service from an always-on architecture running on a single EC2 server to on-demand VM instantiation on Google cloud (in <1 month), significantly reducing costs \& increasing performance. \link[\faExternalLink]{https://opensource.googleblog.com/2013/08/who-is-new-in-google-summer-of-code_30.html}
   \item Added support for configuring and deploying custom surveys and capturing additional user input
 \end{itemize}
 }
