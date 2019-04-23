@@ -5,6 +5,7 @@
 
 \usepackage[margin=0.75in]{geometry}
 \usepackage{fontawesome}
+\usepackage{comment}
 
 \definecolor{color1}{rgb}{0,0,1.0}% dark blue
 \makeatletter
@@ -56,37 +57,8 @@
                    IIIT-Delhi, New Delhi, IN\newline
                    Thesis: \textit{Smartphone-based Anomalous Human Activity Detection and Prediction}}
 
-\section{Research Interests}
-\cvlistitem{Wireless Networking}
-\cvlistitem{Mobile Systems}
-
-\section{Research Directions}
-\subsection{Current}
-\cvlistitem{Indoor 802.11ad/mmWave WLANs
-\begin{itemize}
-\renewcommand\labelitemi{--}
-\item Identify opportunities \& challenges in realizing 802.11ad indoor WLANs
-\item Design and evaluation of link adaptation mechanisms
-\item Leverage MPTCP to build fast \& reliable 802.11ad+ac network
-\item Identify energy consumption concerns in commercial 802.11ad clients
-\end{itemize}
-}
-\cvlistitem{LTE/WiFi coexistence in 5 GHz
-\begin{itemize}
-\renewcommand\labelitemi{--}
-\item Quantify coexistence issues with LTE-Unlicensed and Enterprise WLAN
-\item Propose standard-compliant WiFi-based solutions
-\end{itemize}
-}
-
-\subsection{Previous}
-\cvlistitem{WiFi power-performance tradeoffs in Smartphones
-\begin{itemize}
-\renewcommand\labelitemi{--}
-\item Identified the power-performance relationship in context of 802.11n/ac/ad in mobile devices
-\item Built accurate power models
-\end{itemize}
-}
+\section{Research Interests \& Directions}
+\input{research}
 
 \section{Work Experience}
 \cventry{2013--Present}{Research Assistant}{University at Buffalo, SUNY}{NY}{US}{}
@@ -104,17 +76,8 @@
 \cvlistitem{\textbf{Best Paper Runner Up} ACM WiNTECH 2017 {\small \textsc{[W4]}}}
 \cvlistitem{\textbf{1$^{st}$} prize at the UB School of Engineering \& Applied Sciences (SEAS) Lightning Talk Competition}
 \cvlistitem{\textbf{Winner} of the \textit{Tally Innovation Award} at the \link[All-India Jedi Project Challenge 2012]{http://jed-i.in/challenge/}, organized by IISc., Bangalore.}
-\cvlistitem{Travel Grants
-\begin{itemize}
-\renewcommand\labelitemi{--}
-\item 2018: IEEE SECON, ACM SRC
-\item 2017: ACM MobiCom, ACM SRC
-\item 2016: ACM MobiCom, IEEE ICCC
-\item 2015: ACM IMC, IEEE ICNP
-\end{itemize}
-}
+\cvlistitem{Travel Grants: IEEE SECON, ACM SRC (2018) | ACM MobiCom, SRC (2017) | ACM MobiCom, IEEE ICCC (2016) | ACM IMC, IEEE ICNP (2015)}
 
-\newpage
 \section{Professional Service}
 \cvitem{Chair}{
 \begin{itemize}
@@ -140,6 +103,7 @@
 \end{itemize}
 }
 
+\begin{comment}
 \cvitem{External Reviewer}{
 \begin{itemize}
 \item IEEE Conference on Computer Communications (INFOCOM) 2016, 2015
@@ -147,6 +111,7 @@
 \item IEEE International Conference on Sensing, Communication and Networking (SECON) 2016, 2015
 \end{itemize}
 }
+\end{comment}
 
 \vspace{-0.1in}
 \section{Technical Skills}
