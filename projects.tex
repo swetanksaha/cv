@@ -1,0 +1,75 @@
+\cventry{\texttt{C}\newline
+\texttt{Python}\newline
+\texttt{TCP}\newline
+\texttt{MPTCP}\newline
+\texttt{tc}\newline
+\texttt{Kernel}\newline
+}{Multipath TCP (MPTCP) for Dual-band WiGig+WiFi networks}{NSF Funded}{}{}{
+\begin{itemize}
+  \item Leveraged MPTCP to engage two network interfaces \textit{simultaneously} achieving throughputs of up to $\sim$2.2 Gbps
+  \item Instrumented MPTCP (Linux 4.x) using \texttt{kernel probes} to monitor over 32 parameters in real-time
+  \item Developed kernel tools to monitor TCP/MPTCP send and recv queues tracking ingress and egress for each byte
+  \item Designed \textit{AMuSe}, a novel MPTCP scheduler to enable dynamic packet assignment based on network conditions
+  \item Implemented it as a Linux kernel module improving overall throughput by up to \textbf{2.5x} under diverse scenarios
+  % \item Evaluated AMuSe extensively which showed up to \textbf{2.5x} throughput improvement over the default scheduler
+  \item Submitted a top-tier conference paper (under review)
+\end{itemize}
+}
+
+\vspace{0.025in}
+\cventry{\texttt{Python}\newline
+\texttt{C}\newline
+\texttt{Drivers}\newline
+\texttt{Android}\newline
+}{Power-Performance Tradeoffs for Mobile Devices in Next Generation WiFi Networks}{NSF Funded}{}{}{
+\begin{itemize}
+  \item Developed tools that allow for large-scale automated performance and power measurement of mobile devices
+  \item Enabled data collection \& sync across heterogeneous systems: Linux (Wireless AP), Android, and Power monitor
+  \item Modified the Linux wireless drivers (\texttt{ath9k}, \texttt{ath10k}) to expose userspace control of several PHY/MAC parameters.
+  \item Analyzed the power-performance tradeoff of both the NIC and CPU for uplink/downlink data transfer
+  \item Improved the accuracy of the state-of-the-art power model by up to \textbf{40\%}
+  \item Pubished 1 top-tier conference paper \hyperref[C2]{[C2]}
+\end{itemize}
+}
+
+\vspace{0.025in}
+\cventry{\texttt{Labview}\newline
+\texttt{Python}\newline
+}{X60: A highly Re-configurable Multi-Gigabit Testbed for 60 GHz research}{NSF Funded}{}{}{
+\begin{itemize}
+  \item Set up the first ever software-defined 60 GHz testbed that offers configurability at PHY/MAC/Network layers
+  \item Added several components (e.g., AGC) to existing NI codebase to enable realistic measurements
+  \item Developed set of tools to automate the measurement cycle reducing time from hours to several minutes
+  \item Exposed user controls to enable measurements by external researchers (used by Rice University \& UT Austin)
+  \item Related publications: \hyperref[J2]{[J2]}, \hyperref[W4]{[W4]}
+\end{itemize}
+}
+
+\begin{comment}
+\vspace{0.025in}
+\cventry{\texttt{C}\newline
+\texttt{Python}\newline
+\texttt{expect}\newline
+\texttt{select}\newline
+\texttt{Socket API}\newline
+}{Programming Assignments and Automated Grader for the Computer Networking course}{}{}{\link[\faGithub]{https://cse4589.github.io}}{
+\begin{itemize}
+  \item Designed and developed a set of three networking programming assignments (PAs), now standard in the CSE department at UB for the networking course.
+  \item Developed an auto-grader as a distributed application that fully automates the entire process of packaging, uploading and grading student submissions over a real network of five servers.
+  \item PA 1: Text Chat \& File Transfer Application \link[\faExternalLink]{https://cse4589.github.io/pa1/} (Source: \link[\faGithub]{https://github.com/swetanksaha/cse4589-pa1})
+        \begin{itemize}
+          \item Introduces basic socket programming, client-server model, \texttt{select} syscall to multiplex network and stdin I/O, and byte-stream model of TCP (vs. UDP's packet-based)
+          %\item Bonus file-transfer components allows students to compare file I/O vs. network I/O.
+        \end{itemize}
+  \item PA 2: Reliable Transport Protocols \link[\faExternalLink]{https://cse4589.github.io/pa2/} (Source: \link[\faGithub]{https://github.com/swetanksaha/cse4589-pa2})
+        \begin{itemize}
+          \item Requires implementation of three reliable data transport protocols: Alternating bit, Go-Back-N \& Selective repeat, and multiple alarms with a single simulator timer
+        \end{itemize}
+  \item PA 3: Software Defined Routing \link[\faExternalLink]{https://cse4589.github.io/pa3/} (Source: \link[\faGithub]{https://github.com/swetanksaha/cse4589-pa3})
+        \begin{itemize}
+          \item Involves implementation of a simplified version of the distance vector routing protocol, introducing the concept of control and data planes asking them to implement both functionalities
+          \item Requires contruction of raw packets in code using techniques akin to the Linux kernel (Sample code: \link[\faGithub]{https://github.com/swetanksaha/cse4589-pa3/blob/master/SampleCode/swetankk/src/control_header_lib.c})
+        \end{itemize}
+\end{itemize}
+}
+\end{comment}
